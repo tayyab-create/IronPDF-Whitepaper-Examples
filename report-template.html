@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complex Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #4CAF50; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        .image-section { margin-top: 30px; }
+        .chart-section { margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Annual Report - {{YEAR}}</h1>
+
+    <h2>Section 1: Introduction</h2>
+    <p>{{INTRO_TEXT}}</p>
+
+    <h2>Section 2: Data Summary</h2>
+    <table>
+        <thead>
+            <tr><th>Metric</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+            {{DATA_TABLE}}
+        </tbody>
+    </table>
+
+    <h2>Section 3: Embedded Chart</h2>
+    <div class="chart-section">
+        <img src="{{CHART_IMAGE}}" alt="Chart" width="500" height="300"/>
+    </div>
+
+    <h2>Section 4: Images</h2>
+    <div class="image-section">
+        <img src="{{IMAGE1}}" alt="Image 1" width="300"/>
+        <img src="{{IMAGE2}}" alt="Image 2" width="300"/>
+    </div>
+</body>
+</html>

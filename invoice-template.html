@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #4CAF50; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        .total { font-weight: bold; }
+        .barcode { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <p><strong>Customer Name:</strong> {{CUSTOMER_NAME}}</p>
+    <p><strong>Date:</strong> {{ORDER_DATE}}</p>
+
+    <h2>Order Details</h2>
+    <table>
+        <thead>
+            <tr><th>Product</th><th>Quantity</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+            {{ORDER_DETAILS}}
+        </tbody>
+    </table>
+
+    <h3>Total: ${{ORDER_TOTAL}}</h3>
+
+    <div class="barcode">
+        <img src="{{BARCODE_IMAGE}}" alt="Barcode">
+    </div>
+</body>
+</html>

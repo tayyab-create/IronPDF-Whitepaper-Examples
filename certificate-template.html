@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate of Completion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            border: 5px solid #4CAF50;
+            padding: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .certificate-content {
+            margin-top: 50px;
+        }
+        .qr-code {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificate of Completion</h1>
+    <div class="certificate-content">
+        <p>This is to certify that</p>
+        <h2>{{STUDENT_NAME}}</h2>
+        <p>has successfully completed the course</p>
+        <h3>{{COURSE_TITLE}}</h3>
+        <p>on {{COMPLETION_DATE}}</p>
+    </div>
+    <div class="qr-code">
+        <img src="{{QR_CODE}}" alt="QR Code">
+    </div>
+</body>
+</html>
